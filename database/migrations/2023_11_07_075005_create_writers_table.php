@@ -12,13 +12,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('writers', function (Blueprint $table) {
+        Schema::create('writer', function (Blueprint $table) {
             $table->id();
             $table->string('nev');
             $table->integer('szuletes');
             $table->timestamps();
         });
-        DB::table('writers')->insert([
+        DB::table('writer')->insert([
                                      ['nev'=>'József Attila','szuletes'=>1905],
                                      ['nev'=>'Dominik Sándor','szuletes'=>1900]
                                     ]);
