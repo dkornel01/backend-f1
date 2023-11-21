@@ -18,6 +18,8 @@ use App\Models\Writer;
 Route::get('/', function () {
     return view('welcome');
 });
-/*Route::get('writer',[WriterController::class,'index']);
-Route::get('writer/{id}',[WriterController::class,'show']);
-Route::post('writer',[WriterController::class,'store']);*/
+/*Route::get('/writer',[WriterController::class,'index']);
+Route::get('/writer/{id}',[WriterController::class,'show']);
+Route::post('/writer',[WriterController::class,'store']);
+Route::delete('/writer/{id}',[WriterController::class,'destroy']);
+Route::put('/writer/{id}',[WriterController::class,'update']);*/

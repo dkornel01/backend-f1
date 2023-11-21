@@ -35,7 +35,7 @@ class WriterController extends Controller
         $writers->nev=$request->nev;
         $writers->szuletes=$request->szuletes;
         $writers->save();
-        //return redirect('api/writer');
+        /* return redirect('/api/writer'); */
     }
 
 }

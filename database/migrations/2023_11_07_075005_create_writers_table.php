@@ -12,23 +12,27 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('writer', function (Blueprint $table) {
+        Schema::create('writers', function (Blueprint $table) {
             $table->id();
             $table->string('nev');
             $table->integer('szuletes');
             $table->timestamps();
         });
-        DB::table('writer')->insert([
+        DB::table('writers')->insert([
                                      ['nev'=>'József Attila','szuletes'=>1905],
-                                     ['nev'=>'Dominik Sándor','szuletes'=>1900]
+                                     ['nev'=>'Dominik Sándor','szuletes'=>1900],
+                                     ['nev'=>'Sándor Attila','szuletes'=>1905],
+                                     ['nev'=>'Dominik Géza','szuletes'=>1900]
                                     ]);
     }
 
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    /*public function down(): void
     {
-        Schema::dropIfExists('writers');
-    }
+        Schema::rename('writer', 'writers');
+        Schema::dropIfExists('writer');
+        
+    }*/
 };
