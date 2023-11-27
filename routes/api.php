@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('/writer',[WriterController::class, 'index']);
 Route::post('/writer', [WriterController::class,'store']);
-Route::get('/writer/{id}',[WriterController::class,'show']);
+//Route::get('/writer/{id}',[WriterController::class,'show']);
 Route::delete('/writer/{id}',[WriterController::class,'destroy']);
 Route::put('/writer/{id}',[WriterController::class,'update']);
